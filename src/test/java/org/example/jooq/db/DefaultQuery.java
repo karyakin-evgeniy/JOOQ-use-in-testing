@@ -20,7 +20,7 @@ public abstract class DefaultQuery {
                 record.getValue(Airplane.AIRPLANE.ID),
                 record.getValue(Airplane.AIRPLANE.NUMBER),
                 new ModelQuery().getModelById(record.getValue(Airplane.AIRPLANE.MODEL)),
-                record.getValue(Airplane.AIRPLANE.RELEASE)
+                record.getValue(Airplane.AIRPLANE.RELEASED)
         );
     }
 
@@ -28,7 +28,7 @@ public abstract class DefaultQuery {
         return new ModelDto(
                 record.getValue(Model.MODEL.ID),
                 record.getValue(Model.MODEL.NAME),
-                new CompanyQuery().getCompanyById(record.getValue(Model.MODEL.COMPANY).intValue())
+                new CompanyQuery().getCompanyById(record.getValue(Model.MODEL.COMPANY))
         );
     }
 
