@@ -15,7 +15,7 @@ import java.sql.Statement;
 public class AirplaneQuery extends DefaultQuery implements AirplaneFields, ModelFields {
 
     public AirplaneDto getAirplaneById(Long id) {
-        AirplaneDto dto = null;
+        AirplaneDto dto;
         try {
             Statement statement = connection.createStatement();
             String query = getAirplaneByIdStringQuery(id);

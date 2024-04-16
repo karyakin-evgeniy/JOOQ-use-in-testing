@@ -13,7 +13,7 @@ import org.jooq.DSLContext;
  * Base class for actions in db tables.
  */
 public abstract class DefaultQuery {
-    protected DSLContext context = DatabaseConnector.getContext();
+    protected final DSLContext context = DatabaseConnector.getContext();
 
     public AirplaneDto getAirplaneDtoByRecord(org.jooq.Record record) {
         return new AirplaneDto(

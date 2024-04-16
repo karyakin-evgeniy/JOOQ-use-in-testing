@@ -15,7 +15,7 @@ public class ModelQuery extends DefaultQuery implements ModelFields {
 
     public ModelDto getModelById(Long id)
             throws SQLException {
-        ModelDto modelDto = null;
+        ModelDto modelDto;
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(
                 getModelByIdStringQuery(id));

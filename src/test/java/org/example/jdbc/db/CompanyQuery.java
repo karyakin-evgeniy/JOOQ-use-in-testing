@@ -15,7 +15,7 @@ public class CompanyQuery extends DefaultQuery implements CompanyFields {
 
     public CompanyDto getCompanyById(Long id)
             throws SQLException {
-        CompanyDto companyDto = null;
+        CompanyDto companyDto;
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(
                 getCompanyByIdStringQuery(id));
